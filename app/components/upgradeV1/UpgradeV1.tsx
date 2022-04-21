@@ -2,7 +2,7 @@
 import Form from '@rjsf/antd'
 import type { JSONSchema7 } from 'json-schema'
 
-const Schema: JSONSchema7 = {
+const schema: JSONSchema7 = {
   type: 'object',
   required: ['firstName', 'lastName', 'birthday', 'cardId', 'laserCardId'],
   properties: {
@@ -50,7 +50,7 @@ export default function UpgradeV1() {
     <div>
       <div>Upgrade Fan wallet - to LV1</div>
       <div>ข้อมูลบัตรประชาชน</div>
-      <Form schema={Schema} uiSchema={uiSchema} showErrorList={false} />
+      <Form schema={schema} uiSchema={uiSchema} showErrorList={false} />
     </div>
   )
 }

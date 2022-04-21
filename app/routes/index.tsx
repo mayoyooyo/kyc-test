@@ -1,4 +1,4 @@
-import { Button } from 'antd'
+import { Button, Divider } from 'antd'
 
 export default function Index() {
   return (
@@ -12,7 +12,7 @@ export default function Index() {
         textAlign: 'left',
       }}
     >
-      <Button type='primary' href='/v0v1-register'>
+      <Button type='primary' href='/signup/v0v1-register'>
         v0v1Register
       </Button>
       <Button type='primary' href='/signup/'>
@@ -26,6 +26,13 @@ export default function Index() {
       </Button>
       <Button type='primary' href='/signup/upgrade-v1'>
         upgrade-v1
+      </Button>
+      <Divider />
+      <Button type='primary' href='/v2/register-profile'>
+        address form
+      </Button>
+      <Button type='primary' href='/v2/upgrade-level-1'>
+        upgrade Level 1
       </Button>
     </div>
   )
