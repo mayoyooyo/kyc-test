@@ -18,7 +18,7 @@ export default function Index() {
       <Button type='primary' href='/signup/'>
         signup-fanwallet
       </Button>
-      <Button type='primary' href='/signup/mobile-verify'>
+      <Button type='primary' danger href='/signup/mobile-verify'>
         mobile verrify
       </Button>
       <Button type='primary' href='/signup/password'>
@@ -33,6 +33,12 @@ export default function Index() {
       </Button>
       <Button type='primary' href='/v2/upgrade-level-1'>
         upgrade Level 1
+      </Button>
+      <Button type='primary' href='/v2/sign-up-wallet'>
+        sign up wallet
+      </Button>
+      <Button type='primary' href='/v2/sign-up-password'>
+        sign up wallet password
       </Button>
     </div>
   )
