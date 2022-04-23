@@ -1,4 +1,4 @@
-import ProfileRegister from '~/components/profileRegister/ProfileRegister'
+import ProfileRegisterJson from '~/components/profileRegister/ProfileRegister'
 
 export default function V0V1Register() {
   return (
@@ -8,7 +8,7 @@ export default function V0V1Register() {
         maxWidth: '500px',
       }}
     >
-      <ProfileRegister />
+      <ProfileRegisterJson />
     </div>
   )
 }

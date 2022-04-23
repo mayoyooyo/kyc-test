@@ -5,8 +5,6 @@ export default function SignUp() {
     <div>
       <div
         style={{
-          margin: 'auto',
-          maxWidth: '500px',
           background: 'rgba(0, 0, 0, .30)',
         }}
       >

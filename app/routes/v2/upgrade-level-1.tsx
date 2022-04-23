@@ -4,8 +4,6 @@ export default function UpgradeLevelOne() {
   return (
     <div
       style={{
-        margin: 'auto',
-        maxWidth: '500px',
         background: 'rgba(0, 0, 0, .30)',
       }}
     >

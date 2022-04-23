@@ -4,10 +4,12 @@ import { useState } from 'react'
 import OtpInput from 'react-otp-input'
 
 export default function MobileVerify() {
+  const [value, setValue] = useState('')
   const mobilephone = '0859977636'
   const ref = 'xxxx'
 
   const handleChange = (code: string) => {
+    setValue(code)
     console.log(code)
   }
 
@@ -26,6 +28,7 @@ export default function MobileVerify() {
           isInputNum={true}
           shouldAutoFocus={true}
           onChange={handleChange}
+          value={value}
           inputStyle={{
             width: '3rem',
             height: '3rem',

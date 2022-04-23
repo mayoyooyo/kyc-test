@@ -1,5 +1,6 @@
-import { Button, Checkbox, Form, Input } from 'antd'
+import { Button, Checkbox, Form, Input, Typography } from 'antd'
 
+const { Title } = Typography
 const mobileNumber = '0857799636'
 
 export default function SignUpWalletPassword() {
@@ -8,7 +9,7 @@ export default function SignUpWalletPassword() {
   }
   return (
     <Form onFinish={handleFisnish}>
-      <div>sign up fan wallet</div>
+      <Title level={2}>sign up fan wallet</Title>
       <Form.Item name='mobileNumber'>
         <Input defaultValue={mobileNumber} disabled />
       </Form.Item>

@@ -279,7 +279,7 @@ const uiSchema: any = {
   },
 }
 
-export default function ProfileRegister() {
+export default function ProfileRegisterJson() {
   const [formData, setFormData] = useState<any>(null)
 
   useEffect(() => {
