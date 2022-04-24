@@ -34,6 +34,9 @@ export default function Index() {
       <Button type='primary' href='/v2/upgrade-level-1'>
         upgrade Level 1
       </Button>
+
+      <Divider />
+      <div> done </div>
       <Button type='primary' href='/v2/sign-up-wallet'>
         sign up wallet
       </Button>

@@ -42,6 +42,15 @@ const fundSourceList = [
   },
 ]
 
+const formItemLayout = {
+  labelCol: {
+    xs: { span: 24 }, //iphone x
+  },
+  wrapperCol: {
+    xs: { span: 24 },
+  },
+}
+
 export default function ProfileRegister() {
   const [isSameAddr, setIsSameAddr] = useState<boolean>(false)
   const handleCheckSameAddr = () => setIsSameAddr(!isSameAddr)
@@ -73,7 +82,12 @@ export default function ProfileRegister() {
   }
 
   return (
-    <Form onFinish={handleFisnish} form={form} style={{ padding: '30px' }}>
+    <Form
+      onFinish={handleFisnish}
+      form={form}
+      {...formItemLayout}
+      style={{ padding: '10px' }}
+    >
       <Row justify='center'>
         <Title level={3}>profile</Title>
       </Row>
@@ -81,34 +95,34 @@ export default function ProfileRegister() {
         <Title level={5}>id card address</Title>
       </Row>
       <Row gutter={15}>
-        <Col span={6}>
+        <Col xs={{ span: 24 }} md={{ span: 6 }}>
           <Form.Item name='idCardHouseNumber'>
             <Input placeholder='address number' />
           </Form.Item>
         </Col>
-        <Col span={6}>
+        <Col xs={{ span: 24 }} md={{ span: 6 }}>
           <Form.Item name='idCardBuilding'>
             <Input placeholder='building' />
           </Form.Item>
         </Col>
-        <Col span={12}>
+        <Col xs={{ span: 24 }} md={{ span: 12 }}>
           <Form.Item name='idCardMoo'>
             <Input placeholder='moo' />
           </Form.Item>
         </Col>
       </Row>
       <Row gutter={15}>
-        <Col span={6}>
+        <Col xs={{ span: 24 }} md={{ span: 6 }}>
           <Form.Item name='idCardSoi'>
             <Input placeholder='soi' />
           </Form.Item>
         </Col>
-        <Col span={6}>
+        <Col xs={{ span: 24 }} md={{ span: 6 }}>
           <Form.Item name='idCardRoad'>
             <Input placeholder='road' />
           </Form.Item>
         </Col>
-        <Col span={12}>
+        <Col xs={{ span: 24 }} md={{ span: 12 }}>
           <Form.Item name='idCardDistrict'>
             <Select
               placeholder='district'
@@ -122,17 +136,17 @@ export default function ProfileRegister() {
         </Col>
       </Row>
       <Row gutter={15}>
-        <Col span={6}>
+        <Col xs={{ span: 24 }} md={{ span: 6 }}>
           <Form.Item name='idCardAmphoe'>
             <Input placeholder='amphoe' disabled />
           </Form.Item>
         </Col>
-        <Col span={12}>
+        <Col xs={{ span: 24 }} md={{ span: 12 }}>
           <Form.Item name='idCardProvince'>
             <Input placeholder='province' disabled />
           </Form.Item>
         </Col>
-        <Col span={6}>
+        <Col xs={{ span: 24 }} md={{ span: 6 }}>
           <Form.Item name='idCardZipcode'>
             <Input placeholder='zipcode' disabled />
           </Form.Item>
@@ -143,15 +157,15 @@ export default function ProfileRegister() {
 
       {isSameAddr && (
         <>
-          <Row>
-            <Title level={5}>current addr</Title>
+          <Row align='bottom'>
+            <Title level={3}>current addr</Title>
           </Row>
 
-          <Row align='bottom'>
+          <Row gutter={15} align='bottom'>
             <Col span={24}>
-              <Paragraph type='secondary'>current country</Paragraph>
+              <Text type='secondary'>current country</Text>
             </Col>
-            <Col span={12}>
+            <Col xs={{ span: 24 }} md={{ span: 12 }}>
               <Form.Item name='currentCountry'>
                 <Select
                   showSearch
@@ -179,34 +193,34 @@ export default function ProfileRegister() {
             </Col>
           </Row>
           <Row gutter={15}>
-            <Col span={6}>
+            <Col xs={{ span: 24 }} md={{ span: 6 }}>
               <Form.Item name='currentHouseNumber'>
                 <Input placeholder='address number' />
               </Form.Item>
             </Col>
-            <Col span={6}>
+            <Col xs={{ span: 24 }} md={{ span: 6 }}>
               <Form.Item name='currentBuilding'>
                 <Input placeholder='building' />
               </Form.Item>
             </Col>
-            <Col span={12}>
+            <Col xs={{ span: 24 }} md={{ span: 12 }}>
               <Form.Item name='currentMoo'>
                 <Input placeholder='moo' />
               </Form.Item>
             </Col>
           </Row>
           <Row gutter={15}>
-            <Col span={6}>
+            <Col xs={{ span: 24 }} md={{ span: 6 }}>
               <Form.Item name='currentSoi'>
                 <Input placeholder='soi' />
               </Form.Item>
             </Col>
-            <Col span={6}>
+            <Col xs={{ span: 24 }} md={{ span: 6 }}>
               <Form.Item name='currentRoad'>
                 <Input placeholder='road' />
               </Form.Item>
             </Col>
-            <Col span={12}>
+            <Col xs={{ span: 24 }} md={{ span: 12 }}>
               <Form.Item name='currentDistrict'>
                 <Select
                   placeholder='district'
@@ -225,7 +239,7 @@ export default function ProfileRegister() {
         <Radio.Group style={{ width: '100%' }}>
           <Row>
             {fundSourceList.map((s: any) => (
-              <Col key={s.key} span={8}>
+              <Col key={s.key} xs={{ span: 24 }} md={{ span: 8 }}>
                 <Radio key={s.key} value={s.value}>
                   {s.value}
                 </Radio>
@@ -235,7 +249,7 @@ export default function ProfileRegister() {
         </Radio.Group>
       </Form.Item>
       <Row gutter={15}>
-        <Col span={12}>
+        <Col xs={{ span: 24 }} md={{ span: 12 }}>
           <Form.Item name='career'>
             <Select placeholder='career' showSearch notFoundContent>
               <Select.Option key='mha'>mha</Select.Option>
@@ -243,7 +257,7 @@ export default function ProfileRegister() {
             </Select>
           </Form.Item>
         </Col>
-        <Col span={12}>
+        <Col xs={{ span: 24 }} md={{ span: 12 }}>
           <Form.Item name='salary'>
             <Select placeholder='salary' notFoundContent>
               <Select.Option key='100'>100-200</Select.Option>
@@ -255,15 +269,15 @@ export default function ProfileRegister() {
 
       <Title level={5}>workplace</Title>
       <Row gutter={15} align='bottom'>
-        <Col span={12} offset={12}>
-          <Text>workplace country</Text>
+        <Col xs={{ span: 24 }} md={{ span: 12, offset: 12 }}>
+          <Text type='secondary'>workplace country</Text>
         </Col>
-        <Col span={12}>
+        <Col xs={{ span: 24 }} md={{ span: 12 }}>
           <Form.Item name='workName'>
             <Input placeholder='workName'></Input>
           </Form.Item>
         </Col>
-        <Col span={12}>
+        <Col xs={{ span: 24 }} md={{ span: 12 }}>
           <Form.Item name='workCountry'>
             <Select
               showSearch
