@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 
-export default function Nav() {
+export default function ChangeLocales() {
   const { i18n } = useTranslation()
 
   const changeLanguage = () => {

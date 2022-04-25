@@ -14,7 +14,6 @@ import { i18n } from './i18n.server'
 import { useChangeLanguage } from 'remix-i18next'
 import { useTranslation } from 'react-i18next'
 import { json } from '@remix-run/node'
-import Nav from './components/nav'
 
 type LoaderData = { locale: string }
 

@@ -12,16 +12,9 @@ export default function Index() {
         textAlign: 'left',
       }}
     >
-      <Button type='primary' danger href='/v2/mobile-verify'>
-        mobile verrify
-      </Button>
-
       <Divider />
       <Button type='primary' href='/v2/register-profile'>
         address form
-      </Button>
-      <Button type='primary' href='/v2/upgrade-level-1'>
-        upgrade Level 1
       </Button>
 
       <Divider />
@@ -35,6 +28,17 @@ export default function Index() {
       <Button type='primary' href='/v1/upgrade-level1'>
         upgrade Level 1
       </Button>
+      <Button type='primary' danger href='/v1/mobile-verification'>
+        mobile verrify
+      </Button>
+      <Button type='primary' href='/v1/profile-information'>
+        profile infomation
+      </Button>
+      <Button type='primary' href='/v1/setting-pin'>
+        setting pin
+      </Button>
+      <Divider />
+      <div>modal</div>
     </div>
   )
 }

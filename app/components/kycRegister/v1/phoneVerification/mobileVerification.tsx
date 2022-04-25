@@ -1,6 +1,7 @@
 // @ts-ignore
 import { Button, Col, Form, Input, Layout, Row, Typography } from 'antd'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import OtpInput from 'react-otp-input'
 
 const { Title, Text, Paragraph } = Typography
@@ -8,7 +9,7 @@ const { Header, Footer, Sider, Content } = Layout
 
 const formItemLayout = {
   labelCol: {
-    lg: { span: 4 }, //nb
+    lg: { span: 6 }, //nb
     xs: { span: 24 }, //iphone x
   },
   wrapperCol: {
@@ -17,7 +18,8 @@ const formItemLayout = {
   },
 }
 
-export default function MobileVerify() {
+export default function MobileVerification() {
+  const { t } = useTranslation()
   const [value, setValue] = useState('')
   const mobilephone = '0859977636'
   const ref = 'xxxx'
@@ -38,25 +40,32 @@ export default function MobileVerify() {
     >
       <Row justify='center'>
         <Col>
-          <Title level={3}>Signup - Fan Wallet</Title>
+          <Title level={3}>{t('singup_fanwallet_title')}</Title>
         </Col>
       </Row>
       <Row justify='center'>
         <Col>
-          <Title level={4}>Mobile No. verification</Title>
+          <Title level={4}>{t('mobile_verify_title')}</Title>
         </Col>
       </Row>
       <Row justify='center'>
-        <Col>
+        <Col xs={{ span: 24 }} md={{ span: 10 }}>
           <Input defaultValue={mobilephone} disabled />
         </Col>
       </Row>
-      <Row justify='center'>
-        <Text>
-          <Text>Verify OTP</Text>
-          <Text>We have sent OTP code to your mobile no.</Text>
-          <Text>ref: {ref}</Text>
-        </Text>
+      <Row justify='center' gutter={10}>
+        <Col>
+          <Text>{t('verify_otp')}</Text>
+        </Col>
+        <Col>
+          <Text>{t('otp_send_to')}</Text>
+        </Col>
+        <Col>
+          <Text>
+            {t('ref')}
+            {ref}
+          </Text>
+        </Col>
       </Row>
 
       <Row justify='center'>
@@ -69,8 +78,8 @@ export default function MobileVerify() {
             inputStyle={{
               width: '3rem',
               height: '3rem',
-              margin: '0 1rem',
-              fontSize: '2rem',
+              margin: '1rem 0.5rem',
+              fontSize: '1rem',
               borderRadius: 4,
               border: '1px solid rgba(0,0,0,0.3)',
             }}
@@ -81,12 +90,12 @@ export default function MobileVerify() {
       <Row justify='center'>
         <Form.Item>
           <Button type='primary' htmlType='submit'>
-            Submit
+            {t('submit')}
           </Button>
         </Form.Item>
       </Row>
       <Row justify='center'>
-        <Button type='link'>resend OTP</Button>
+        <Button type='link'>{t('resend_otp')}</Button>
       </Row>
     </Form>
   )

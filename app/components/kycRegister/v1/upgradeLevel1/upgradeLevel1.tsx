@@ -32,83 +32,88 @@ export default function UpgradeLevel1() {
         <Title level={3}>{t('upgrade_to_level_1_title')}</Title>
       </Row>
       <Row justify='center'>
-        <Text>{t('idcard_infomation')}</Text>
+        <Text>{t('id_card_infomation')}</Text>
       </Row>
       <Row justify='center'>
-        <Col xs={{ span: 24 }} md={{ span: 12 }}>
+        <Col xs={{ span: 24 }} md={{ span: 16 }}>
           <Form.Item
             name='firstName'
             label={t('first_name')}
             rules={[
               {
                 required: true,
-                message: 'please input your first name ',
+                message: t('first_name_blank'),
               },
             ]}
+            colon={false}
           >
             <Input />
           </Form.Item>
         </Col>
       </Row>
       <Row justify='center'>
-        <Col xs={{ span: 24 }} md={{ span: 12 }}>
+        <Col xs={{ span: 24 }} md={{ span: 16 }}>
           <Form.Item
             name='lastName'
             label={t('last_name')}
             rules={[
               {
                 required: true,
-                message: 'please input your last name ',
+                message: t('last_name_blank'),
               },
             ]}
+            colon={false}
           >
             <Input />
           </Form.Item>
         </Col>
       </Row>
       <Row justify='center'>
-        <Col xs={{ span: 24 }} md={{ span: 12 }}>
+        <Col xs={{ span: 24 }} md={{ span: 16 }}>
           <Form.Item
             name='birthday'
             label={t('birthday')}
             rules={[
               {
                 required: true,
-                message: 'please input your birthday ',
+                message: t('birthday_blank'),
               },
             ]}
+            colon={false}
           >
             <DatePicker format='DD/MM/YYYY' />
           </Form.Item>
         </Col>
       </Row>
       <Row justify='center'>
-        <Col xs={{ span: 24 }} md={{ span: 12 }}>
+        <Col xs={{ span: 24 }} md={{ span: 16 }}>
           <Form.Item
             name='idCard'
             label={t('id_card')}
             rules={[
               {
                 required: true,
-                message: 'please input your id card ',
+                message: t('id_card_blank'),
               },
             ]}
+            colon={false}
           >
-            <Input />
+            <Input maxLength={13} minLength={13} />
           </Form.Item>
         </Col>
       </Row>
       <Row justify='center'>
-        <Col xs={{ span: 24 }} md={{ span: 12 }}>
+        <Col xs={{ span: 24 }} md={{ span: 16 }}>
           <Form.Item
             name='idCardLaser'
             label={t('laser_id_card')}
             rules={[
               {
                 required: true,
-                message: 'please input your laser id card ',
+                message: t('laser_id_card_blank'),
               },
             ]}
+            colon={false}
           >
             <Input />
           </Form.Item>

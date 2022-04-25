@@ -1,4 +1,4 @@
-import ProfileRegister from '~/components/v2/profileRegister/profileReg'
+import ProfileRegister from '~/components/old/profileRegister/profileReg'
 
 export default function FormAddress() {
   return (
