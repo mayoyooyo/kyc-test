@@ -12,21 +12,10 @@ export default function Index() {
         textAlign: 'left',
       }}
     >
-      <Button type='primary' href='/signup/v0v1-register'>
-        v0v1Register
-      </Button>
-      <Button type='primary' href='/signup/'>
-        signup-fanwallet
-      </Button>
-      <Button type='primary' danger href='/signup/mobile-verify'>
+      <Button type='primary' danger href='/v2/mobile-verify'>
         mobile verrify
       </Button>
-      <Button type='primary' href='/signup/password'>
-        signup-password
-      </Button>
-      <Button type='primary' href='/signup/upgrade-v1'>
-        upgrade-v1
-      </Button>
+
       <Divider />
       <Button type='primary' href='/v2/register-profile'>
         address form
@@ -36,12 +25,15 @@ export default function Index() {
       </Button>
 
       <Divider />
-      <div> done </div>
-      <Button type='primary' href='/v2/sign-up-wallet'>
+      <div>v1</div>
+      <Button type='primary' href='/v1/sign-up-wallet'>
         sign up wallet
       </Button>
-      <Button type='primary' href='/v2/sign-up-password'>
-        sign up wallet password
+      <Button type='primary' href='/v1/sign-up-password'>
+        sign up password
+      </Button>
+      <Button type='primary' href='/v1/upgrade-level1'>
+        upgrade Level 1
       </Button>
     </div>
   )

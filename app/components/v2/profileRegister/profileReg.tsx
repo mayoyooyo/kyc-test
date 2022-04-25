@@ -87,6 +87,7 @@ export default function ProfileRegister() {
       form={form}
       {...formItemLayout}
       style={{ padding: '10px' }}
+      className='profile-form '
     >
       <Row justify='center'>
         <Title level={3}>profile</Title>

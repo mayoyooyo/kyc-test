@@ -1,5 +1,5 @@
 // @ts-ignore
-import { Button, Form, Input, Layout, Row, Typography } from 'antd'
+import { Button, Col, Form, Input, Layout, Row, Typography } from 'antd'
 import { useState } from 'react'
 import OtpInput from 'react-otp-input'
 
@@ -26,28 +26,41 @@ export default function MobileVerify() {
     setValue(code)
     console.log(code)
   }
+  const handleFisnish = (e: any) => {
+    console.log(e)
+  }
 
   return (
-    <Content>
+    <Form
+      {...formItemLayout}
+      onFinish={handleFisnish}
+      style={{ padding: '10px' }}
+    >
       <Row justify='center'>
-        <Title level={3}>Signup - Fan Wallet</Title>
+        <Col>
+          <Title level={3}>Signup - Fan Wallet</Title>
+        </Col>
       </Row>
       <Row justify='center'>
-        <Title level={4}>Mobile No. verification</Title>
+        <Col>
+          <Title level={4}>Mobile No. verification</Title>
+        </Col>
       </Row>
       <Row justify='center'>
-        <Input defaultValue={mobilephone} disabled />
+        <Col>
+          <Input defaultValue={mobilephone} disabled />
+        </Col>
       </Row>
       <Row justify='center'>
-        <div>
-          <span>Verify OTP</span>
-          <span>We have sent OTP code to your mobile no.</span>
-          <span>ref: {ref}</span>
-        </div>
+        <Text>
+          <Text>Verify OTP</Text>
+          <Text>We have sent OTP code to your mobile no.</Text>
+          <Text>ref: {ref}</Text>
+        </Text>
       </Row>
 
-      <Form>
-        <Row justify='center'>
+      <Row justify='center'>
+        <Form.Item name='otp'>
           <OtpInput
             isInputNum={true}
             shouldAutoFocus={true}
@@ -63,18 +76,18 @@ export default function MobileVerify() {
             }}
             numInputs={6}
           />
-        </Row>
-        <Row justify='center'>
-          <Form.Item>
-            <Button type='primary' htmlType='submit'>
-              Submit
-            </Button>
-          </Form.Item>
-        </Row>
-      </Form>
+        </Form.Item>
+      </Row>
+      <Row justify='center'>
+        <Form.Item>
+          <Button type='primary' htmlType='submit'>
+            Submit
+          </Button>
+        </Form.Item>
+      </Row>
       <Row justify='center'>
         <Button type='link'>resend OTP</Button>
       </Row>
-    </Content>
+    </Form>
   )
 }

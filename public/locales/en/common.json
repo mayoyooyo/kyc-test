@@ -1,0 +1,24 @@
+{
+  "singup_fanwallet_title": "Sign up - Fan Wallet",
+  "mobile_number": "Mobile No.",
+  "mobile_number_blank": "please inputd Mobile number",
+  "email": "Email",
+  "email_blank": "please input Email",
+  "id_card": "ID Card",
+  "id_card_blank": "please input ID Card",
+  "agree_to": "agree to ",
+  "term_of_service": "  term of service ",
+  "and": "and  ",
+  "privacy_policy": "privacy policy",
+  "us_citizenship": "I confirm that I do not have US citizenship.",
+  "next": "next",
+
+  "your_password_for": "your password for",
+  "password": "password",
+  "confirm_password": "confirm password",
+  "password_blank": "please input password",
+  "invalid_password_pattern": "invalid Password Pattern",
+  "confirm_your_password": "Please confirm your password",
+  "password_dont_match": "The two passwords that you entered do not match"
+  
+}

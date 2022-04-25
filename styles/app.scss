@@ -1,1 +1,33 @@
-@import 'antd/dist/antd.css'
+.center-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.profile-form {
+  .ant-input {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #d3d3d3;
+
+    &:focus {
+      border-color: rgb(0, 0, 0);
+      box-shadow: none;
+    }
+
+    &[disabled] {
+      background-color: transparent;
+      box-shadow: none;
+      color: black;
+      pointer-events: none;
+    }
+  }
+  .ant-select-selector {
+    outline: 0;
+    border-width: 0 0 2px !important;
+    border-color: #d3d3d3 !important;
+    box-shadow: none !important;
+  }
+}
