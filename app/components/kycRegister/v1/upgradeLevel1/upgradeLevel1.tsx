@@ -1,4 +1,13 @@
-import { Button, Form, Input, DatePicker, Typography, Row, Col } from 'antd'
+import {
+  Button,
+  Form,
+  Input,
+  DatePicker,
+  Typography,
+  Row,
+  Col,
+  Checkbox,
+} from 'antd'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -29,20 +38,20 @@ export default function UpgradeLevel1() {
       style={{ padding: '10px' }}
     >
       <Row justify='center'>
-        <Title level={3}>{t('upgrade_to_level_1_title')}</Title>
+        <Title level={3}>{t('upgrade wallet to lv1')}</Title>
       </Row>
       <Row justify='center'>
-        <Text>{t('id_card_infomation')}</Text>
+        <Text>{t('idcard infomation')}</Text>
       </Row>
       <Row justify='center'>
         <Col xs={{ span: 24 }} md={{ span: 16 }}>
           <Form.Item
             name='firstName'
-            label={t('first_name')}
+            label={t('firstname')}
             rules={[
               {
                 required: true,
-                message: t('first_name_blank'),
+                message: t('please input firstname'),
               },
             ]}
             colon={false}
@@ -55,11 +64,11 @@ export default function UpgradeLevel1() {
         <Col xs={{ span: 24 }} md={{ span: 16 }}>
           <Form.Item
             name='lastName'
-            label={t('last_name')}
+            label={t('lastname')}
             rules={[
               {
                 required: true,
-                message: t('last_name_blank'),
+                message: t('please input lastname'),
               },
             ]}
             colon={false}
@@ -76,7 +85,7 @@ export default function UpgradeLevel1() {
             rules={[
               {
                 required: true,
-                message: t('birthday_blank'),
+                message: t('please input birthday'),
               },
             ]}
             colon={false}
@@ -89,11 +98,11 @@ export default function UpgradeLevel1() {
         <Col xs={{ span: 24 }} md={{ span: 16 }}>
           <Form.Item
             name='idCard'
-            label={t('id_card')}
+            label={t('idcard')}
             rules={[
               {
                 required: true,
-                message: t('id_card_blank'),
+                message: t('please input idcard'),
               },
             ]}
             colon={false}
@@ -106,11 +115,11 @@ export default function UpgradeLevel1() {
         <Col xs={{ span: 24 }} md={{ span: 16 }}>
           <Form.Item
             name='idCardLaser'
-            label={t('laser_id_card')}
+            label={t('idcard laser')}
             rules={[
               {
                 required: true,
-                message: t('laser_id_card_blank'),
+                message: t('please input idcard laser'),
               },
             ]}
             colon={false}
@@ -120,9 +129,16 @@ export default function UpgradeLevel1() {
         </Col>
       </Row>
       <Row justify='center'>
+        <Col xs={{ span: 24 }} md={{ span: 16, offset: 8 }}>
+          <Form.Item name='acceptVerify'>
+            <Checkbox>{t('accept verify identity')}</Checkbox>
+          </Form.Item>
+        </Col>
+      </Row>
+      <Row justify='center'>
         <Form.Item>
           <Button type='primary' htmlType='submit'>
-            next
+            {t('next')}
           </Button>
         </Form.Item>
       </Row>

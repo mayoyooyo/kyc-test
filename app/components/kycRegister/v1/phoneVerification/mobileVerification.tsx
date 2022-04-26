@@ -21,6 +21,7 @@ const formItemLayout = {
 export default function MobileVerification() {
   const { t } = useTranslation()
   const [value, setValue] = useState('')
+  const [otpError, setOtpError] = useState<boolean>(false)
   const mobilephone = '0859977636'
   const ref = 'xxxx'
 
@@ -40,12 +41,12 @@ export default function MobileVerification() {
     >
       <Row justify='center'>
         <Col>
-          <Title level={3}>{t('singup_fanwallet_title')}</Title>
+          <Title level={3}>{t('singup fanwallet')}</Title>
         </Col>
       </Row>
       <Row justify='center'>
         <Col>
-          <Title level={4}>{t('mobile_verify_title')}</Title>
+          <Title level={4}>{t('mobile verification')}</Title>
         </Col>
       </Row>
       <Row justify='center'>
@@ -55,10 +56,10 @@ export default function MobileVerification() {
       </Row>
       <Row justify='center' gutter={10}>
         <Col>
-          <Text>{t('verify_otp')}</Text>
+          <Text>{t('verify otp')}</Text>
         </Col>
         <Col>
-          <Text>{t('otp_send_to')}</Text>
+          <Text>{t('otp send to')}</Text>
         </Col>
         <Col>
           <Text>
@@ -87,6 +88,11 @@ export default function MobileVerification() {
           />
         </Form.Item>
       </Row>
+      {otpError && (
+        <Row justify='center'>
+          <Text style={{ color: 'red' }}>{t('otp error')}</Text>
+        </Row>
+      )}
       <Row justify='center'>
         <Form.Item>
           <Button type='primary' htmlType='submit'>
@@ -95,7 +101,7 @@ export default function MobileVerification() {
         </Form.Item>
       </Row>
       <Row justify='center'>
-        <Button type='link'>{t('resend_otp')}</Button>
+        <Button type='link'>{t('resend otp')}</Button>
       </Row>
     </Form>
   )

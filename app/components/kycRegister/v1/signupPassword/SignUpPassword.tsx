@@ -28,11 +28,11 @@ export default function SignUpWalletPassword() {
       style={{ padding: '10px' }}
     >
       <Row justify='center' gutter={10}>
-        <Title level={3}>{t('singup_fanwallet_title')}</Title>
+        <Title level={3}>{t('singup fanwallet')}</Title>
       </Row>
       <Row justify='center'>
         <Col>
-          <Text>{t('your_password_for')}</Text>
+          <Text>{t('your password for')}</Text>
         </Col>
       </Row>
       <Row justify='center'>
@@ -48,12 +48,12 @@ export default function SignUpWalletPassword() {
             rules={[
               {
                 required: true,
-                message: t('password_blank'),
+                message: t('please input password'),
               },
               {
                 pattern:
                   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-                message: t('invalid_password_pattern'),
+                message: t('invalid password pattern'),
               },
             ]}
             hasFeedback
@@ -67,18 +67,18 @@ export default function SignUpWalletPassword() {
         <Col xs={{ span: 24 }} md={{ span: 16 }}>
           <Form.Item
             name='confirmPassword'
-            label={t('confirm_password')}
+            label={t('confirm password')}
             rules={[
               {
                 required: true,
-                message: t('confirm_your_password'),
+                message: t('please confirm your password'),
               },
               ({ getFieldValue }) => ({
                 validator(_, value) {
                   if (!value || getFieldValue('password') === value) {
                     return Promise.resolve()
                   }
-                  return Promise.reject(new Error(t('password_dont_match')))
+                  return Promise.reject(new Error(t('password dont match')))
                 },
               }),
             ]}
@@ -90,16 +90,16 @@ export default function SignUpWalletPassword() {
       </Row>
       <Row justify='center'>
         <Col>
-          <Text>{t('password_pattern_title')}</Text>
+          <Text>{t('password pattern title')}</Text>
         </Col>
       </Row>
       <Row justify='center'>
         <Col>
           <ul>
-            <li>{t('password_pattern_text_1')}</li>
-            <li>{t('password_pattern_text_2')}</li>
-            <li>{t('password_pattern_text_3')}</li>
-            <li>{t('password_pattern_text_4')}</li>
+            <li>{t('password pattern text 1')}</li>
+            <li>{t('password pattern text 2')}</li>
+            <li>{t('password pattern text 3')}</li>
+            <li>{t('password pattern text 4')}</li>
           </ul>
         </Col>
       </Row>
@@ -107,7 +107,7 @@ export default function SignUpWalletPassword() {
         <Col>
           <Form.Item>
             <Button type='primary' htmlType='submit'>
-              {t('confirm_password')}
+              {t('confirm password')}
             </Button>
           </Form.Item>
         </Col>

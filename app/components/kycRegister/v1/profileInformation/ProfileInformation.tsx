@@ -74,15 +74,15 @@ export default function ProfileInformation() {
       className='profile-form '
     >
       <Row justify='center'>
-        <Title level={3}>{t('personal_profile_title')}</Title>
+        <Title level={3}>{t('personal profile')}</Title>
       </Row>
       <Row>
-        <Title level={5}>{t('id_card_address')}</Title>
+        <Title level={5}>{t('idcard address')}</Title>
       </Row>
       <Row gutter={15}>
         <Col xs={{ span: 24 }} md={{ span: 6 }}>
           <Form.Item name='idCardHouseNumber'>
-            <Input placeholder={t('address_number')} />
+            <Input placeholder={t('address number')} />
           </Form.Item>
         </Col>
         <Col xs={{ span: 24 }} md={{ span: 6 }}>
@@ -115,18 +115,18 @@ export default function ProfileInformation() {
       </Row>
 
       <Checkbox onClick={handleCheckDiffAddr}>
-        {t('different_address')}
+        {t('different address')}
       </Checkbox>
 
       {isDiffAddr && (
         <>
           <Row align='bottom'>
-            <Title level={5}>{t('convenient_contact_address')}</Title>
+            <Title level={5}>{t('convenient contact address')}</Title>
           </Row>
 
           <Row gutter={15} align='bottom'>
             <Col span={24}>
-              <Text type='secondary'>{t('current_country')}</Text>
+              <Text type='secondary'>{t('current country')}</Text>
             </Col>
             <Col xs={{ span: 24 }} md={{ span: 12 }}>
               <Form.Item name='currentCountry'>
@@ -192,7 +192,7 @@ export default function ProfileInformation() {
         </>
       )}
 
-      <Title level={5}>{t('fund_source_choice')}</Title>
+      <Title level={5}>{t('fund source choice')}</Title>
       <Form.Item name='fundSource'>
         <Radio.Group style={{ width: '100%' }}>
           <Row>
@@ -226,15 +226,15 @@ export default function ProfileInformation() {
       </Row>
 
       <Title level={5}>{t('workplace')}</Title>
-      <Text>{t('workplace_description')}</Text>
+      <Text>{t('workplace description')}</Text>
       <Row gutter={15} align='bottom'>
         <Col xs={{ span: 24 }} md={{ span: 12 }}>
           <Form.Item name='workName'>
-            <Input placeholder={t('workplace_name')}></Input>
+            <Input placeholder={t('workplace name')}></Input>
           </Form.Item>
         </Col>
         <Col xs={{ span: 24 }} md={{ span: 12 }}>
-          <Text type='secondary'>{t('workplace_country')}</Text>
+          <Text type='secondary'>{t('workplace country')}</Text>
           <Form.Item name='workCountry'>
             <Select
               showSearch

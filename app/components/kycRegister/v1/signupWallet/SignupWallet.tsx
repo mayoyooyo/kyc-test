@@ -38,17 +38,17 @@ export default function SignUpWallet() {
       style={{ padding: '10px' }}
     >
       <Row justify='center'>
-        <Title level={3}>{t('singup_fanwallet_title')}</Title>
+        <Title level={3}>{t('singup fanwallet')}</Title>
       </Row>
       <Row gutter={15} justify='center'>
         <Col xs={{ span: 24 }} md={{ span: 16 }}>
           <Form.Item
             name='mobileNumber'
-            label={t('mobile_number')}
+            label={t('mobile number')}
             rules={[
               {
                 required: true,
-                message: t('mobile_number_blank'),
+                message: t('please input mobile number'),
               },
             ]}
             colon={false}
@@ -66,7 +66,7 @@ export default function SignUpWallet() {
               {
                 required: true,
                 type: 'email',
-                message: t('email_blank'),
+                message: t('please input email'),
               },
             ]}
             colon={false}
@@ -79,8 +79,8 @@ export default function SignUpWallet() {
         <Col xs={{ span: 24 }} md={{ span: 16 }}>
           <Form.Item
             name='idCard'
-            label={t('id_card')}
-            rules={[{ required: true, message: t('id_card_blank') }]}
+            label={t('idcard')}
+            rules={[{ required: true, message: t('please input idcard') }]}
             colon={false}
           >
             <Input maxLength={13} minLength={13} />
@@ -95,13 +95,13 @@ export default function SignUpWallet() {
               onChange={() => setAcceptTermsCheck(!acceptTermsCheck)}
             >
               <Row>
-                <Text>{t('agree_to')}</Text>
+                <Text>{t('agree to')}</Text>
                 <Text style={{ marginInline: '5px' }}>
-                  {t('term_of_service')}
+                  {t('term of service')}
                 </Text>
                 <Text>{t('and')}</Text>
                 <Text style={{ marginInline: '5px' }}>
-                  {t('privacy_policy')}
+                  {t('privacy policy')}
                 </Text>
               </Row>
             </Checkbox>
@@ -116,7 +116,7 @@ export default function SignUpWallet() {
             initialValue={false}
           >
             <Checkbox>
-              <Text>{t('us_citizenship')}</Text>
+              <Text>{t('dont have us citizenship')}</Text>
             </Checkbox>
           </Form.Item>
         </Col>
