@@ -130,7 +130,11 @@ export default function UpgradeLevel1() {
       </Row>
       <Row justify='center'>
         <Col xs={{ span: 24 }} md={{ span: 16, offset: 8 }}>
-          <Form.Item name='acceptVerify'>
+          <Form.Item
+            name='acceptVerify'
+            valuePropName='checked'
+            initialValue={false}
+          >
             <Checkbox>{t('accept verify identity')}</Checkbox>
           </Form.Item>
         </Col>
