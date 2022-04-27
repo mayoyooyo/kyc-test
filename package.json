@@ -37,6 +37,8 @@
     "react-hook-form": "^7.30.0",
     "react-i18next": "^11.16.7",
     "react-otp-input": "^2.4.0",
+    "react-simple-keyboard": "^3.4.114",
+    "remix": "^1.4.1",
     "remix-i18next": "^4.0.0",
     "thai-id-validator": "^1.0.7"
   },
