@@ -11,7 +11,7 @@
     "build:css": "postcss styles --base styles --dir app/styles --env production",
     "build": "cross-env NODE_ENV=production remix build",
     "dev": "concurrently \"yarn run sass\" \"yarn run dev:css\" \"remix dev\"",
-    "start": "cross-env NODE_ENV=production remix-serve build"
+    "start": "remix-serve build"
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",

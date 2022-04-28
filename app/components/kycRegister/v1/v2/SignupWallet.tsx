@@ -5,7 +5,6 @@ import {
   Form,
   Input,
   Row,
-  Space,
   Typography,
 } from 'antd'
 import { useState } from 'react'
@@ -15,11 +14,11 @@ const { Title, Text, Paragraph } = Typography
 
 const formItemLayout = {
   labelCol: {
-    sm: { span: 6 }, //nb
+    lg: { span: 6 }, //nb
     xs: { span: 24 }, //iphone x
   },
   wrapperCol: {
-    sm: { span: 16 },
+    lg: { span: 16 },
     xs: { span: 24 },
   },
 }

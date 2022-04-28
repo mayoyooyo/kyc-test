@@ -7,11 +7,11 @@ const { Title, Text, Paragraph } = Typography
 
 const formItemLayout = {
   labelCol: {
-    lg: { span: 6 }, //nb
+    sm: { span: 6 }, //nb
     xs: { span: 24 }, //iphone x
   },
   wrapperCol: {
-    lg: { span: 16 },
+    sm: { span: 16 },
     xs: { span: 24 },
   },
 }

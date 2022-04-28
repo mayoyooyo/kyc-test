@@ -158,7 +158,7 @@ export default function ProfileInformation() {
           <Row gutter={15}>
             <Col xs={{ span: 24 }} md={{ span: 6 }}>
               <Form.Item name='currentHouseNumber'>
-                <Input placeholder={t('address_number')} />
+                <Input placeholder={t('address number')} />
               </Form.Item>
             </Col>
             <Col xs={{ span: 24 }} md={{ span: 6 }}>
